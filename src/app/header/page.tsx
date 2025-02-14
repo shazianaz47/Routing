@@ -1,3 +1,4 @@
+import Link from "next/link"
 
 export default function Header(){
     return(
@@ -11,6 +12,7 @@ export default function Header(){
                 PaymentMode
             </li>
         </ul>
+        <Link href="/">Go to Home</Link>
       </div>
     )
   }
