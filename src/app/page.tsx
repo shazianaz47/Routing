@@ -1,12 +1,7 @@
  "use client"
-import react from "react";
-// import Contact from "./contact-us/page";
-// import About from "./about/page";
-// import Footer from"./footer/page";
-
 import{useRouter} from "next/navigation"
 import Link from "next/link";
-import path from "path";
+
 
 export default function Home(){
   const router= useRouter();
@@ -18,10 +13,10 @@ export default function Home(){
       
       <div className="flex max-w[70] gap-y-10">
         <ul className="flex gap-14 mt-30 ml-10 mr-20">
-          <li className="hover:text-sky-300"><a href="/">Home</a></li><br/>
-          <li className="hover:text-orange-500"><a href="/about">About</a></li><br/>
+          <li className="hover:text-sky-300"><Link href="/">Home</Link></li><br/>
+          <li className="hover:text-orange-500"><Link href="/about">About</Link></li><br/>
           <li className="hover:text-yellow-300"><button onClick= {()=>router.push("/header")}>Header</button></li><br/>
-          <li className="hover:text-pink-600"><a href='/contact-us'>Contact</a></li><br/>
+          <li className="hover:text-pink-600"><Link href='/contact-us'>Contact</Link></li><br/>
           <li className= "hover:text-green-200"><button onClick= {()=>router.push("/footer")}>Footer</button></li>
         </ul>
         <div className ="flex gap-14 mr-[30]">
